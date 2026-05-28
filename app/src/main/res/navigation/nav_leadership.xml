@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_leadership"
+    app:startDestination="@id/leadershipHomeFragment">
+
+    <fragment
+        android:id="@+id/leadershipHomeFragment"
+        android:name="com.inovagab.presentation.leadership.home.LeadershipHomeFragment"
+        android:label="@string/nav_home">
+        <action android:id="@+id/action_to_gestao_estrategias" app:destination="@id/gestaoEstrategiasFragment" />
+        <action android:id="@+id/action_to_projetos_lideranca" app:destination="@id/projetosLiderancaFragment" />
+        <action android:id="@+id/action_to_dashboard" app:destination="@id/dashboardFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/gestaoEstrategiasFragment" android:name="com.inovagab.presentation.leadership.strategies.GestaoEstrategiasFragment" />
+    <fragment android:id="@+id/projetosLiderancaFragment" android:name="com.inovagab.presentation.leadership.projects.ProjetosLiderancaFragment" />
+    <fragment android:id="@+id/dashboardFragment" android:name="com.inovagab.presentation.leadership.dashboard.DashboardFragment" />
+    <fragment android:id="@+id/profileFragment" android:name="com.inovagab.presentation.components.ProfileFragment" />
+
+</navigation>

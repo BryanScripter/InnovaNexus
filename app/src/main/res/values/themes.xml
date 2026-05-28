@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.InnovaNexus" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/primary_foreground</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/secondary_foreground</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/card</item>
+        <item name="colorOnSurface">@color/foreground</item>
+        <item name="colorError">@color/destructive</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/card</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Menu / list cards — subtle elevation like React shadow-sm -->
+    <style name="Widget.InnovaNexus.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/radius_lg</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="cardBackgroundColor">@color/card</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.Card.Flat" parent="Widget.InnovaNexus.Card">
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <!-- Stat / tinted cards — colored surface only, no white inner layer (V0 border-0) -->
+    <style name="Widget.InnovaNexus.Card.Tinted" parent="Widget.Material3.CardView.Filled">
+        <item name="cardCornerRadius">@dimen/radius_lg</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="contentPadding">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- Destaque principal (ex.: Resumo Executivo na Home Liderança) -->
+    <style name="Widget.InnovaNexus.Card.Highlight" parent="Widget.InnovaNexus.Card">
+        <item name="cardElevation">3dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/primary_20</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="cornerRadius">@dimen/radius_md</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="iconSize">20dp</item>
+        <item name="rippleColor">@color/primary_20</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.Button.Demo" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/radius_md</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="backgroundTint">@color/card</item>
+        <item name="rippleColor">@color/primary_10</item>
+        <item name="android:textColor">@color/foreground</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.Input.Filled" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxBackgroundColor">@color/secondary_50</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_md</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_md</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_md</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_md</item>
+        <item name="hintTextColor">@color/muted_foreground</item>
+    </style>
+
+    <!-- Login — outlined M3, fundo branco, borda visível (V0 rounded-xl + ring-primary) -->
+    <style name="Widget.InnovaNexus.Input.Outlined" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/card</item>
+        <item name="boxStrokeColor">@color/input_box_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_lg</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_lg</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_lg</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_lg</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:textColorHint">@color/muted_foreground</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.Input.Outlined.EditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/foreground</item>
+        <item name="android:textColorHint">@color/muted_foreground</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">@dimen/input_height</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="cursorColor">@color/primary</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.Input.Outlined.Password" parent="Widget.InnovaNexus.Input.Outlined">
+        <item name="endIconMode">password_toggle</item>
+        <item name="endIconMinSize">@dimen/input_end_icon_size</item>
+        <item name="endIconTint">@color/input_end_icon_soft</item>
+        <item name="endIconScaleType">center</item>
+        <item name="endIconContentDescription">@string/toggle_password_visibility</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.Input.Outlined.EditText.Password" parent="Widget.InnovaNexus.Input.Outlined.EditText">
+        <item name="android:paddingEnd">40dp</item>
+    </style>
+
+    <style name="TextAppearance.InnovaNexus.ExecValue" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">@dimen/exec_value_text_size</item>
+        <item name="android:textColor">@color/foreground</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@drawable/bg_bottom_nav</item>
+        <item name="itemIconSize">20dp</item>
+        <item name="itemIconTint">@color/bottom_nav_color</item>
+        <item name="itemTextColor">@color/bottom_nav_color</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.InnovaNexus.Nav.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.InnovaNexus.Nav.Inactive</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.InnovaNexus.NavIndicator</item>
+        <item name="itemRippleColor">@color/primary_10</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/primary_10</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.InnovaNexus.Full</item>
+        <item name="android:width">48dp</item>
+        <item name="android:height">32dp</item>
+    </style>
+
+    <style name="ShapeAppearance.InnovaNexus.Full" parent="ShapeAppearance.Material3.Corner.Full">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearance.InnovaNexus.RoundedXL" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerSize">@dimen/radius_md</item>
+    </style>
+
+    <style name="TextAppearance.InnovaNexus.SectionLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/muted_foreground</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.InnovaNexus.PageTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/foreground</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.InnovaNexus.Nav.Active" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="TextAppearance.InnovaNexus.Nav.Inactive" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/muted_foreground</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.HeaderBack" parent="Widget.Material3.Button.IconButton">
+        <item name="iconTint">@color/foreground</item>
+        <item name="iconSize">20dp</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="rippleColor">@color/primary_10</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.FAB" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="fabCustomSize">56dp</item>
+        <item name="maxImageSize">24dp</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="tint">@color/primary_foreground</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.InnovaNexus.Full</item>
+        <item name="elevation">4dp</item>
+    </style>
+
+    <style name="Widget.InnovaNexus.Chip.Status" parent="Widget.Material3.Chip.Assist">
+        <item name="chipMinHeight">24dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="chipCornerRadius">6dp</item>
+        <item name="chipStrokeWidth">0dp</item>
+    </style>
+</resources>

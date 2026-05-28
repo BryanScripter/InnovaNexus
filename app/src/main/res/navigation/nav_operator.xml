@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_operator"
+    app:startDestination="@id/operatorHomeFragment">
+
+    <fragment
+        android:id="@+id/operatorHomeFragment"
+        android:name="com.inovagab.presentation.operator.home.OperatorHomeFragment"
+        android:label="@string/nav_home">
+        <action android:id="@+id/action_to_estrategias" app:destination="@id/estrategiasFragment" />
+        <action android:id="@+id/action_to_nova_ideia" app:destination="@id/novaIdeiaFragment" />
+        <action android:id="@+id/action_to_minhas_ideias" app:destination="@id/minhasIdeiasFragment" />
+        <action android:id="@+id/action_to_ranking" app:destination="@id/rankingFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/estrategiasFragment" android:name="com.inovagab.presentation.operator.strategies.EstrategiasFragment" />
+    <fragment android:id="@+id/novaIdeiaFragment" android:name="com.inovagab.presentation.operator.ideas.NovaIdeiaFragment" />
+    <fragment android:id="@+id/minhasIdeiasFragment" android:name="com.inovagab.presentation.operator.ideas.MinhasIdeiasFragment" />
+    <fragment android:id="@+id/rankingFragment" android:name="com.inovagab.presentation.operator.ranking.RankingFragment" />
+    <fragment android:id="@+id/profileFragment" android:name="com.inovagab.presentation.components.ProfileFragment" />
+
+</navigation>

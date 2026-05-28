@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_manager"
+    app:startDestination="@id/managerHomeFragment">
+
+    <fragment
+        android:id="@+id/managerHomeFragment"
+        android:name="com.inovagab.presentation.manager.home.ManagerHomeFragment"
+        android:label="@string/nav_home">
+        <action android:id="@+id/action_to_gestao_ideias" app:destination="@id/gestaoIdeiasFragment" />
+        <action android:id="@+id/action_to_projetos" app:destination="@id/projetosFragment" />
+        <action android:id="@+id/action_to_indicadores" app:destination="@id/indicadoresFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/gestaoIdeiasFragment" android:name="com.inovagab.presentation.manager.ideas.GestaoIdeiasFragment">
+        <action android:id="@+id/action_to_detalhe_ideia" app:destination="@id/detalheIdeiaFragment" />
+    </fragment>
+    <fragment android:id="@+id/detalheIdeiaFragment" android:name="com.inovagab.presentation.manager.ideas.DetalheIdeiaFragment">
+        <argument android:name="ideaId" app:argType="string" />
+    </fragment>
+    <fragment android:id="@+id/projetosFragment" android:name="com.inovagab.presentation.manager.projects.ProjetosFragment">
+        <action android:id="@+id/action_to_editar_projeto" app:destination="@id/editarProjetoFragment" />
+    </fragment>
+    <fragment android:id="@+id/editarProjetoFragment" android:name="com.inovagab.presentation.manager.projects.EditarProjetoFragment">
+        <argument android:name="projectId" app:argType="string" />
+    </fragment>
+    <fragment android:id="@+id/indicadoresFragment" android:name="com.inovagab.presentation.manager.projects.IndicadoresFragment" />
+    <fragment android:id="@+id/profileFragment" android:name="com.inovagab.presentation.components.ProfileFragment" />
+
+</navigation>
